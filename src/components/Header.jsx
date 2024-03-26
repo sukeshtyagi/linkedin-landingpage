@@ -3,11 +3,11 @@ import React from "react";
 function Header() {
   return (
     <div className="header box-border w-10/12 h-fit p-2 px-6 flex justify-between bg-red-200 m-auto my-4 bg-white">
-      <p className="premium text-lg font-medium text-black tracking-wider">
+      <p className="premium text-xl font-medium text-black tracking-wider">
         <span className="linkedSpan text-2xl font-bold text-blue-500 tracking-tight">
           Linked
         </span>
-        <span className="inSpan mx-1 p-1 text-xl rounded font-semibold text-white bg-blue-500">
+        <span className="inSpan mx-1 mr-2 p-1 text-xl rounded font-semibold text-white bg-blue-500">
           in
         </span>
         PREMIUM

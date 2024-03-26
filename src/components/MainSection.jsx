@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MainSectionChild from "./MainSectionChild";
 
 function MainSection() {
   const [careerSelected, setCareerSelected] = useState(true);
@@ -50,6 +51,13 @@ function MainSection() {
         )}
 
         <div className="segregationDiv box-border w-1/12 h-3 rounded-xl border-yellow-700 mx-auto bg-yellow-700"></div>
+
+        <div className="childContainer box-border flex justify-evenly items-center mt-20 mb-28">
+          <MainSectionChild parent="On-Demand Learning" />
+          <MainSectionChild parent="Monthly Inmail" />
+          <MainSectionChild parent="Who's Viewed Your Profile" />
+          <MainSectionChild parent="Applicant Insights" />
+        </div>
       </div>
     </div>
   );
