@@ -14,11 +14,13 @@ function Footer() {
         </p>
 
         <div className="links box-border flex justify-start items-center gap-10">
-          <p className="copyright text-gray-500">@LinkedIn corpotation 2024</p>
-          <p className="about text-black">About</p>
-          <p className="cookie text-black">Cookie Policy</p>
-          <p className="privacy text-black">Privacy Policy</p>
-          <p className="user text-black">User Agreement</p>
+          <p className="copyright text-gray-500 text-md">
+            @LinkedIn corpotation 2024
+          </p>
+          <p className="about text-black text-lg">About</p>
+          <p className="cookie text-black text-lg">Cookie Policy</p>
+          <p className="privacy text-black text-lg">Privacy Policy</p>
+          <p className="user text-black text-lg">User Agreement</p>
         </div>
       </div>
     </div>
