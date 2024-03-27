@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function IconChildInfo({ name, heading, para }) {
+  const navigate = useNavigate();
+
   return (
     <div className="outer box-border h-fit flex justify-center items-start bg-gradient-to-r from-customGray  via-red-100 to-customGray mb-5">
       <div className="inner box-border w-2/5">
@@ -81,7 +84,12 @@ function IconChildInfo({ name, heading, para }) {
         <p className="para w-2/5 text-lg text-gray-600 font-normal p-2">
           {para}
         </p>
-        <button className="commonButton border border-blue-500 px-5 py-2 flex justify-center items-center mt-3 mb-12 ml-2">
+        <button
+          className="commonButton border border-blue-500 px-5 py-2 flex justify-center items-center mt-3 mb-12 ml-2"
+          onClick={() => {
+            navigate("/signup");
+          }}
+        >
           <span className="text-blue-500 text-lg">
             Upgrade free for 1 month
           </span>

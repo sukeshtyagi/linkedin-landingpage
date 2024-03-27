@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function CareerInfoDiv() {
+  const navigate = useNavigate();
   return (
     <div className="outerDiv box-border w-full bg-infodiv text-white p-2">
       <div className="infoDIv box-border flex flex-col items-center justify-center my-16">
@@ -11,7 +13,12 @@ function CareerInfoDiv() {
           <p className="topDivPara text-gray-400 text-2xl tracking-wide  ">
             Try it for free.Cancel at any time.
           </p>
-          <button className="button bg-white px-5 py-1 mt-8 rounded text-infodiv text-xl">
+          <button
+            className="button bg-white px-5 py-1 mt-8 rounded text-infodiv text-xl"
+            onClick={() => {
+              navigate("/signup");
+            }}
+          >
             Try Premium Career
           </button>
         </div>

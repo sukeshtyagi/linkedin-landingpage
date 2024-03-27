@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const navigate = useNavigate();
   return (
     <div className="hero box-border w-full h-full overflow-hidden border-t-4 border-blue-400 relative">
       <img src="/images/h8.jpg" alt="" className="box-border w-full h-96" />
@@ -10,7 +12,12 @@ function Hero() {
           <p className="upper text-black text-3xl p-2 leading-9 tracking-normal">
             Discover how premium can help you
           </p>
-          <button className="lower text-white text-lg font-normal bg-blue-900 px-8 py-2 rounded">
+          <button
+            className="lower text-white text-lg font-normal bg-blue-900 px-8 py-2 rounded"
+            onClick={() => {
+              navigate("/signup");
+            }}
+          >
             Upgrade for 1 month
           </button>
         </div>
