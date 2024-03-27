@@ -25,13 +25,7 @@ function SignUp() {
             Password (6+characters)
           </label>
 
-          <div className="flex items-center bg-white w-full border border-black rounded">
-            <input
-              type="password"
-              className="inputs box-border w-full outline-none rounded-lg h-8 px-5 py-2"
-            />
-            <button className="text-blue-500 text-lg mr-5 p-1">Show</button>
-          </div>
+         
           <div className="flex items-center bg-white w-full border border-black rounded">
             <input
               type={showPassword ? "text" : "password"}
