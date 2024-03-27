@@ -24,10 +24,12 @@ function SingIn() {
 
         <div className="flex items-center bg-white w-full border border-black rounded">
           <input
-            type="password"
+           type={showPassword ? "text" : "password"}
             className="inputs box-border w-full outline-none rounded-lg h-8 px-5 py-2"
           />
-          <button className="text-blue-500 text-lg mr-5 p-1">Show</button>
+          <button className="text-blue-500 text-lg mr-5 p-1"
+            onClick={() => setShowPassword(!showPassword)}
+          >Show</button>
         </div>
         <p className="box-border my-2 text-xl text-blue-700">
           Forgot Password?
