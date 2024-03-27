@@ -64,9 +64,33 @@ function MainSection() {
             </>
           )}
         </div>
-
+        <div className="childContainer box-border">
+          {careerSelected && (
+            <>
+              <IconChildInfo
+                name="On-Demand Learning"
+                heading="Sharpen Your Skills"
+                para="Access over 16,000 expert-led LinkedIn learning courses to hone your skills or learn something new."
+              />
+              <IconChildInfo
+                name="Monthly Inmail"
+                heading="Make new connections"
+                para="React out to hiring managers and recruiters via Inmail to indicate interest in an open role.Inmail is 3.1x more effective than email alone."
+              />
+              <IconChildInfo
+                name="Who's Viewed Your Profile"
+                heading="Your profile is gaining traction"
+                para="Find out whether a hiring manager or recruiter has viewed your profile."
+              />
+              <IconChildInfo
+                name="Applicant Insights"
+                heading="Find a job that fits"
+                para="Get directed to open roles where you'd be a fit based on your skills,past experience, salary requirements and education."
+              />
+            </>
+          )}
+        </div>
         {careerSelected && <CareerInfoDiv />}
-        {careerSelected && <IconChildInfo />}
       </div>
     </div>
   );
