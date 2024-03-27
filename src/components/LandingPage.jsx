@@ -1,8 +1,8 @@
 import React from "react";
-import Footer from "./Footer";
-import Header from "./Header";
-import Hero from "./Hero";
-import MainSection from "./MainSection";
+import Footer from "./landingPageChildCompoents/Footer";
+import Header from "./landingPageChildCompoents/Header";
+import Hero from "./landingPageChildCompoents/Hero";
+import MainSection from "./landingPageChildCompoents/MainSection";
 
 function LandingPage() {
   return (
