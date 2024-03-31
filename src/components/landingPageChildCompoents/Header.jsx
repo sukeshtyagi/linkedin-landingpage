@@ -4,20 +4,39 @@ import { useNavigate } from "react-router-dom";
 function Header({ parent }) {
   const navigate = useNavigate();
   return (
-    <div className="header box-border w-10/12 h-fit p-2 px-6 flex justify-between bg-red-200 m-auto my-4 bg-white">
-      <p className="premium text-xl font-medium text-black tracking-wider">
-        <span className="linkedSpan text-2xl font-bold text-blue-500 tracking-tight">
+    <div className="header box-border w-full sm:w-10/12 h-fit p-2 px-6 flex justify-between items-center m-auto my-4 text-sm sm:text-xl">
+      <p className="premium font-medium  text-black tracking-wider">
+        <span className="linkedSpan text-xl font-bold text-blue-500 tracking-tight">
           Linked
         </span>
-        <span className="inSpan mx-1 mr-2 p-1 text-xl rounded font-semibold text-white bg-blue-500">
+        <span className="inSpan mx-1 mr-2 p-1  rounded font-semibold text-white bg-blue-500">
           in
         </span>
         PREMIUM
       </p>
 
       {!parent && (
+        <div className="icon lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      )}
+
+      {!parent && (
         <button
-          className="headerButton box-border w-1/6 h-1/6 border rounded border-blue-500	border-2 text-blue-500 font-medium"
+          className="headerButton hidden lg:block box-border w-1/5 h-1/6 border rounded border-blue-500	border-2 text-blue-500 font-medium"
           onClick={() => {
             navigate("/signup");
           }}
