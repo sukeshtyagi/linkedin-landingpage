@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Header({ parent }) {
+function Header({ parent, smallScreen, setSmallScreen }) {
   const navigate = useNavigate();
   return (
-    <div className="header box-border w-full sm:w-10/12 h-fit p-2 px-6 flex justify-between items-center m-auto my-4 text-sm sm:text-xl">
+    <div className="header box-border w-full sm:w-10/12 h-fit p-2 px-4 flex justify-between items-center m-auto my-4 text-sm sm:text-xl">
       <p className="premium font-medium  text-black tracking-wider">
         <span className="linkedSpan text-xl font-bold text-blue-500 tracking-tight">
           Linked
@@ -15,8 +15,8 @@ function Header({ parent }) {
         PREMIUM
       </p>
 
-      {!parent && (
-        <div className="icon lg:hidden">
+      {!parent && !smallScreen && (
+        <div className="icon md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -24,6 +24,9 @@ function Header({ parent }) {
             strokeWidth={1.5}
             stroke="currentColor"
             className="w-6 h-6"
+            onClick={() => {
+              setSmallScreen(true);
+            }}
           >
             <path
               strokeLinecap="round"
@@ -34,9 +37,31 @@ function Header({ parent }) {
         </div>
       )}
 
+      {!parent && smallScreen && (
+        <div className="icon md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+            onClick={() => {
+              setSmallScreen(false);
+            }}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        </div>
+      )}
+
       {!parent && (
         <button
-          className="headerButton hidden lg:block box-border w-1/5 h-1/6 border rounded border-blue-500	border-2 text-blue-500 font-medium"
+          className="headerButton hidden md:block box-border w-1/4 h-1/6 border rounded border-blue-500	border-2 text-blue-500 font-medium"
           onClick={() => {
             navigate("/signup");
           }}
