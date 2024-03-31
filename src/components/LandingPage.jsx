@@ -21,7 +21,7 @@ function LandingPage() {
       )}
 
       {smallScreen && (
-        <div className="smallScreenDiv box-border border-y-2 bg-gray-200 h-screen flex justify-center">
+        <div className="smallScreenDiv box-border border-t-2 border-purple-500 bg-gray-200 h-screen flex justify-center">
           <button
             className="headerButton box-border w-7/12 sm:w-1/4 h-12 px-2 mt-6 bg-white border rounded border-blue-500	border-2 text-blue-500 font-medium"
             onClick={() => {
