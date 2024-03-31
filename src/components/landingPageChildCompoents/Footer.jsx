@@ -34,7 +34,7 @@ function Footer() {
               in
             </span>
           </p>
-          <p className="copyright text-gray-500 text-md">
+          <p className="copyright text-gray-500 text-sm">
             @LinkedIn corpotation 2024
           </p>
         </div>
