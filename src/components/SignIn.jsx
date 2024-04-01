@@ -63,24 +63,24 @@ function SignIn() {
           .
         </p>
 
-        <button className="box-border w-full h-12 m-auto p-2 text-black text-lg font-normal rounded-3xl border border-gray-600 mb-6 flex justify-start items-center gap-20">
-          <FontAwesomeIcon icon={faGoogle} className="w-5 h-5 ml-12" />
+        <button className="box-border w-full h-12 text-black text-lg sm:text-lg font-normal rounded-xl border border-gray-600 mb-6 flex justify-evenly items-center gap-4">
+          <FontAwesomeIcon icon={faGoogle} className="w-4 h-4 ml-2 " />
           Continue with Google
         </button>
 
-        <button className="box-border w-full h-12 m-auto p-2 text-black text-lg font-normal rounded-3xl border border-gray-600 mb-6 flex justify-start items-center gap-20">
-          <FontAwesomeIcon icon={faApple} className="w-8 h-8 ml-10" />
+        <button className="box-border w-full h-12 text-black text-lg sm:text-lg font-normal rounded-xl border border-gray-600 mb-6 flex justify-evenly items-center gap-4">
+          <FontAwesomeIcon icon={faApple} className="w-6 h-6 " />
           Sign in with Apple
         </button>
 
-        <button className="box-border w-full h-12 m-auto p-2 text-black text-lg font-normal rounded-3xl border border-gray-600 mb-6 flex justify-start items-center gap-20">
+        <button className="box-border w-full h-12 text-black text-lg sm:text-lg font-normal rounded-xl border border-gray-600 mb-6 flex justify-evenly items-center gap-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="currentColor"
-            className="w-8 h-8 text-blue-600 ml-10"
+            className="w-5 h-5 text-blue-600"
           >
             <path
               strokeLinecap="round"
