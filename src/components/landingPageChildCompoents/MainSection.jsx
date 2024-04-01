@@ -19,7 +19,7 @@ function MainSection() {
 
   return (
     <div className="outerDiv box-border h-auto ">
-      <div className="topDiv box-border h-auto flex items-center justify-center gap-5 pt-2 text-lg mx-10 mt-5 border-b-2 border-gray-400">
+      <div className="topDiv box-border h-auto flex items-center justify-center gap-5 pt-2 text-sm sm:text-base md:text-lg md:gap-8 lg:gap-12 mx-10 mt-5 border-b-2 border-gray-400">
         <button
           className={`careerButton box-border ${
             careerSelected ? "text-blue-500 border-b-blue-500 border-b-2" : ""
@@ -41,20 +41,20 @@ function MainSection() {
 
       <div className="midDiv box-border h-auto px-0 overflow-x-hidden overflow-y-auto">
         {careerSelected && (
-          <h1 className="heading box-border w-3/5 m-auto text-center my-20 text-4xl leading-loose text-black font-normal tracking-wider">
+          <h1 className="heading box-border w-3/5 md:w-full m-auto text-center my-20 text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-6xl leading-loose text-black font-normal tracking-wider">
             Grow professionally with Premium Career
           </h1>
         )}
 
         {businessSelected && (
-          <h1 className="heading box-border w-3/5 m-auto text-center my-20 text-4xl leading-loose text-black font-normal tracking-wider">
+          <h1 className="heading box-border w-3/5 md:w-full m-auto text-center my-20 text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-6xl leading-loose text-black font-normal tracking-wider">
             Get more clients with Premium Business
           </h1>
         )}
 
-        <div className="segregationDiv box-border w-1/12 h-3 rounded-xl border-yellow-700 mx-auto bg-yellow-700"></div>
+        <div className="segregationDiv box-border w-2/12 md:w-1/12 xl:w-28 h-1 md:h-1.5 xl:h-2 rounded-xl border-yellow-700 mx-auto bg-yellow-700"></div>
 
-        <div className="childContainer box-border flex justify-evenly items-center mt-20 mb-28">
+        <div className="childContainer box-border flex flex-col lg:flex-row justify-center items-center gap-10 xl:justify-evenly mt-20 mb-28">
           {careerSelected && (
             <>
               <MainSectionChild parent="On-Demand Learning" />

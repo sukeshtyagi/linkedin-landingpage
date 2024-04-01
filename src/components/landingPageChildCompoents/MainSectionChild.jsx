@@ -2,14 +2,14 @@ import React from "react";
 
 function MainSectionChild({ parent }) {
   return (
-    <div className="container box-border w-fit flex flex-col items-center gap-10">
+    <div className="container box-border w-fit flex flex-col items-center gap-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={3}
         stroke="currentColor"
-        className="w-8 h-8 text-gray-500 mb-5"
+        className="w-8 h-8 text-gray-500 "
       >
         <path
           strokeLinecap="round"
@@ -94,7 +94,9 @@ function MainSectionChild({ parent }) {
         </>
       )}
 
-      <p className="text text-blue-500 text-xl font-bold">{parent}</p>
+      <p className="text text-blue-500 text-lg sm:text-2xl lg:text-xl xl:text-2xl font-bold">
+        {parent}
+      </p>
     </div>
   );
 }
