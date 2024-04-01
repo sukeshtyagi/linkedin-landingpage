@@ -4,9 +4,17 @@ import { useNavigate } from "react-router-dom";
 function Header({ parent, smallScreen, setSmallScreen }) {
   const navigate = useNavigate();
   return (
-    <div className="header box-border w-full sm:w-10/12 h-fit p-2 px-4 flex justify-between items-center m-auto my-4 text-sm sm:text-xl">
-      <p className="premium font-medium  text-black tracking-wider">
-        <span className="linkedSpan text-xl font-bold text-blue-500 tracking-tight">
+    <div
+      className={`header box-border w-full p-2 px-4 flex justify-between items-center text-sm sm:text-base caret-transparent bg-slate-50 ${
+        parent ? " h-1/6" : " h-fit"
+      }`}
+    >
+      <p className="premium font-medium flex items-center text-black tracking-wider">
+        <span
+          className={`linkedSpan  font-bold text-blue-500 tracking-tight  ${
+            parent ? "text-2xl" : "text-xl"
+          }`}
+        >
           Linked
         </span>
         <span className="inSpan mx-1 mr-2 p-1  rounded font-semibold text-white bg-blue-500">

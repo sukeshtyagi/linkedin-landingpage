@@ -6,7 +6,7 @@ import SingIn from "./SingIn";
 
 function Premium({ child }) {
   return (
-    <div className="outer">
+    <div className="outer box-border w-screen h-screen">
       <Header parent="premium" />
 
       {child === "signup" && <SignUp />}
