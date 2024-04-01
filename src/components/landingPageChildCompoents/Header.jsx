@@ -5,11 +5,16 @@ function Header({ parent, smallScreen, setSmallScreen }) {
   const navigate = useNavigate();
   return (
     <div
-      className={`header box-border w-full p-2 px-4 flex justify-between items-center text-sm sm:text-base caret-transparent bg-slate-50 ${
+      className={`header box-border w-full p-2 px-4 flex justify-between items-center text-sm sm:text-base caret-transparent bg-slate-50 cursor-pointer ${
         parent ? " h-1/6" : " h-fit"
       }`}
     >
-      <p className="premium font-medium flex items-center text-black tracking-wider">
+      <p
+        className="premium font-medium flex items-center text-black tracking-wider"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
         <span
           className={`linkedSpan  font-bold text-blue-500 tracking-tight  ${
             parent ? "text-2xl" : "text-xl"
