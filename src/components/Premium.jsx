@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./landingPageChildCompoents/Header";
 import Footer from "./landingPageChildCompoents/Footer";
 import SignUp from "./SignUp";
-import SingIn from "./SingIn";
+import SignIn from "./SignIn";
 
 function Premium({ child }) {
   return (
@@ -10,7 +10,7 @@ function Premium({ child }) {
       <Header parent="premium" />
 
       {child === "signup" && <SignUp />}
-      {child === "signin" && <SingIn />}
+      {child === "signin" && <SignIn />}
 
       <Footer />
     </div>

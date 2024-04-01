@@ -1,13 +1,13 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faApple, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
-function SingIn() {
+function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   return (
-    <div className="outer box-border w-3/4 m-auto bg-gray-400 my-16 rounded-xl p-4 py-10">
-      <div className="signin box-border w-1/2  mx-auto my-10 bg-white px-8 py-4 rounded-xl">
+    <div className="outer box-border w-full sm:w-11/12 md:w-3/4 lg:w-1/2 mx-auto bg-gray-400 my-16 rounded-xl p-4 py-10">
+      <div className="signin box-border w-11/12 sm:w-4/5 mx-auto my-10 bg-white px-8 py-4 rounded-xl">
         <h1 className="box-border w-fit h-fit text-3xl py-2 px-0 font-bold text-black">
           Sign in
         </h1>
@@ -18,18 +18,21 @@ function SingIn() {
           <label className="py-1 px-2">Email or Phone</label>
           <input
             type="text"
-            className="inputs box-border text-lg w-full outline-none rounded-lg h-8 px-2 py-2"
+            className="inputs box-border text-lg sm:text-xl w-full outline-none rounded-lg h-8 px-2 py-2"
           />
         </div>
 
-        <div className="flex items-center bg-white w-full border border-black rounded">
+        <div className="flex items-center sm:h-12 bg-white w-full border border-black rounded ">
           <input
-           type={showPassword ? "text" : "password"}
-            className="inputs box-border w-full outline-none rounded-lg h-8 px-5 py-2"
+            type={showPassword ? "text" : "password"}
+            className="inputs box-border w-full outline-none rounded-lg h-8 px-5 py-2 sm:text-xl"
           />
-          <button className="text-blue-500 text-lg mr-5 p-1"
+          <button
+            className="text-blue-500 text-lg mr-5 p-1 sm:text-xl"
             onClick={() => setShowPassword(!showPassword)}
-          >Show</button>
+          >
+            Show
+          </button>
         </div>
         <p className="box-border my-2 text-xl text-blue-700">
           Forgot Password?
@@ -92,4 +95,4 @@ function SingIn() {
   );
 }
 
-export default SingIn;
+export default SignIn;
